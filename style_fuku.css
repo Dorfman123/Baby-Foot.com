@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 100px; /* Ajoute un espace égal à la hauteur de la bannière */
+}
+
+/* Bannière rouge en haut de la page */
+.banniere {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #23274A;
+    color: red;
+    padding: 10px;
+    height: 100px;
+    z-index: 1000;
+}
+
+.banniere-img-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px; /* Hauteur de l'image */
+    width: auto; /* Conserver la proportion */
+    margin: 0;
+}
+
+.banniere-img-right {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    height: 80px; /* Hauteur de l'image */
+    width: auto; /* Conserver la proportion */
+    margin: 0;
+}
+
+.banniere-img-middle {
+    position: absolute;
+    top: 0;
+    right: 640px;
+    height: 80px; /* Hauteur de l'image */
+    width: auto; /* Conserver la proportion */
+    margin: 0;
+}
+
+
+/* Conteneur des menus alignés horizontalement */
+.menus {
+    display: flex; /* Utilise flexbox pour aligner les menus côte à côte */
+    justify-content: center; /* Centre les menus horizontalement */
+    gap: 80px; /* Espace entre les menus */
+    position: fixed;
+    top: 110px; /* Ajuster pour centrer verticalement dans la bannière */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centre précisément les menus */
+    z-index: 1001;
+}
+
+/* Conteneur de chaque menu */
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style du bouton du menu */
+.menu button {
+    font-family: "Poppins";
+    background-color: #23274A; /* Couleur de fond du bouton */
+    color: #cab1fb; /* Couleur du texte du bouton */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    width: auto;
+}
+
+/* Quand le bouton du menu est survolé, changer la couleur de fond */
+.menu button:hover {
+    background-color: #23274A;
+    color: #673db6;
+}
+
+/* Menu déroulant, initialement caché avec transition */
+.menu-deroulant {
+    font-family: "Poppins";
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #404673;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    border-radius: 4px;
+    opacity: 0; /* Invisible au début */
+    visibility: hidden; /* Invisible au début */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Style des options du menu déroulant */
+.menu-deroulant a {
+    color: #9d6ff3; /* Couleur du texte des options */
+    background-color: #404673; /* Couleur de fond des options */
+    padding: 12px 16px; /* Espacement autour du texte */
+    text-decoration: none;
+    display: block;
+    text-align: center; /* Centrer le texte dans chaque option */
+    border-bottom: 0px solid #ddd; /* Ligne entre les options */
+    margin: 0; /* Enlever les marges */
+}
+
+/* Arrondir les coins supérieurs de la première option */
+.menu-deroulant a:first-child {
+    border-top-left-radius: 8px; /* Coin supérieur gauche arrondi */
+    border-top-right-radius: 8px; /* Coin supérieur droit arrondi */
+}
+
+/* Arrondir les coins inférieurs de la dernière option */
+.menu-deroulant a:last-child {
+    border-bottom-left-radius: 8px; /* Coin inférieur gauche arrondi */
+    border-bottom-right-radius: 8px; /* Coin inférieur droit arrondi */
+}
+
+.menu-deroulant a:hover {
+    background-color: #23274A;
+    color: #673db6;
+    border: none;
+    outline: none;
+}
+
+/* Lorsque vous survolez le conteneur de menu, le menu devient visible avec une transition */
+.menu:hover .menu-deroulant {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Titre principal */
+.style_title_1 {
+  font-family: 'Poppins', cursive;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 90px;
+  padding: 30px 100px 25px 100px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.7); /* Légère transparence pour l'ombre */
+}
+
+/* Sous-titre */
+.style_sub_title_1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-variant: small-caps;
+  font-size: 35px;
+  line-height: 40px;
+  padding: 5px 25px;
+  text-align: justify;
+  text-decoration: underline green;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Paragraphe avec texte vert */
+.style_paragraphe_4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  padding: 5px 75px;
+  text-align: justify;
+  color: green;
+  text-shadow: 2px 1px 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Paragraphe avec texte bleu */
+.style_paragraphe_5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  padding: 5px 75px;
+  text-align: justify;
+  color: blue;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Image centrée avec ombre */
+.style_img_center_1 {
+  display: block;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Ombre plus subtile */
+}
